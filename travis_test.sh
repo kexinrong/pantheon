@@ -10,6 +10,4 @@ test/setup.py default_tcp
 PANTHEON_DIR=$(pwd)
 echo $PANTHEON_DIR
 
-mm-delay 5 sh -c 'ssh -o "StrictHostKeyChecking=no" $USER@$MAHIMAHI_BASE exit; mm-loss uplink .1 mm-loss downlink .1 test/test.py default_tcp -r $USER@$MAHIMAHI_BASE:pantheon'
-
-mm-delay 5 sh -c 'ssh -o "StrictHostKeyChecking=no" $USER@$MAHIMAHI_BASE exit; mm-loss uplink .1 mm-loss downlink .1 test/test.py default_tcp -r $USER@$MAHIMAHI_BASE:$PANTHEON_DIR'
+mm-delay 5 sh -c 'ssh -o "StrictHostKeyChecking=no" $USER@$MAHIMAHI_BASE exit; mm-loss uplink .1 mm-loss downlink .1 test/test.py default_tcp -r $USER@$MAHIMAHI_BASE:build/StanfordLPNG/pantheon'
