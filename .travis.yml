@@ -17,7 +17,7 @@ env:
         - CMD='./travis_test.sh'
         #- CMD='test/setup.py quic        &&  test/test.py -f 2 -t 10 quic'
         #- CMD='test/setup.py webrtc      &&  test/test.py -f 2 -t 10 webrtc'
-        - CMD='test/pre_setup.py; test/setup.py default_tcp;  test/test.py -f 2 -t 5 default_tcp'
+        - CMD='test/setup.py default_tcp;  test/test.py -f 2 -t 5 default_tcp'
         #- CMD='test/setup.py vegas       &&  test/test.py -f 2 -t 10 vegas'
         #- - CMD='test/setup.py koho_cc     &&  test/test.py -f 2 -t 10 koho_cc'
         #- CMD='test/setup.py ledbat      &&  test/test.py -f 2 -t 10 ledbat'
@@ -28,7 +28,7 @@ env:
         #- CMD='test/setup.py taova       &&  test/test.py -f 2 -t 10 taova'
 
 script:
-  #- test/pre_setup.py
+  - test/pre_setup.py
   - eval $CMD
 
 notifications:
