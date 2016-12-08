@@ -14,11 +14,11 @@ install:
 
 env:
     matrix:
-        - CMD='test/run.py -t 10'
+        #- CMD='test/run.py -t 10'
         #- CMD='test/setup.py quic        &&  test/test.py -f 2 -t 10 quic'
         #- CMD='test/setup.py webrtc      &&  test/test.py -f 2 -t 10 webrtc'
-        - CMD='test/setup.py default_tcp &&  test/test.py -f 2 -t 10 default_tcp'
-        - CMD='test/setup.py vegas       &&  test/test.py -f 2 -t 10 vegas'
+        #- CMD='test/setup.py default_tcp &&  test/test.py -f 2 -t 10 default_tcp'
+        #- CMD='test/setup.py vegas       &&  test/test.py -f 2 -t 10 vegas'
         - CMD='test/setup.py koho_cc     &&  test/test.py -f 2 -t 10 koho_cc'
         - CMD='test/setup.py ledbat      &&  test/test.py -f 2 -t 10 ledbat'
         - CMD='test/setup.py pcc         &&  test/test.py -f 2 -t 10 pcc'
@@ -29,7 +29,7 @@ env:
 
 script:
   - test/pre_setup.py
-  - $CMD
+  - eval $CMD
 
 notifications:
   slack: keithw:WjjCMz8yip3iQrHKBmkFGI1u
