@@ -14,18 +14,18 @@ install:
 
 env:
     matrix:
-        - CMD='./travis_test.sh'
-        #- CMD='test/setup.py quic        &&  test/test.py -f 2 -t 10 quic'
-        #- CMD='test/setup.py webrtc      &&  test/test.py -f 2 -t 10 webrtc'
-        - CMD='test/setup.py default_tcp;  test/test.py -f 2 -t 5 default_tcp'
-        #- CMD='test/setup.py vegas       &&  test/test.py -f 2 -t 10 vegas'
-        #- - CMD='test/setup.py koho_cc     &&  test/test.py -f 2 -t 10 koho_cc'
-        #- CMD='test/setup.py ledbat      &&  test/test.py -f 2 -t 10 ledbat'
-        #- CMD='test/setup.py pcc         &&  test/test.py -f 2 -t 10 pcc'
-        #- CMD='test/setup.py verus       &&  test/test.py -f 2 -t 10 verus'
-        #- CMD='test/setup.py scream      &&  test/test.py -f 2 -t 10 scream'
-        #- CMD='test/setup.py sprout      &&  test/test.py -f 2 -t 10 sprout'
-        #- CMD='test/setup.py taova       &&  test/test.py -f 2 -t 10 taova'
+        - CMD='travis_extras/travis_test.sh'
+        #- CMD='test/setup.py quic        && test/test.py -f 2 -t 10 quic'
+        #- CMD='test/setup.py webrtc      && test/test.py -f 2 -t 10 webrtc'
+        - CMD='test/setup.py default_tcp && test/test.py -f 2 -t 10 default_tcp'
+        - CMD='test/setup.py vegas       && test/test.py -f 2 -t 10 vegas'
+        - CMD='test/setup.py koho_cc     && test/test.py -f 2 -t 10 koho_cc'
+        #- CMD='test/setup.py ledbat      && test/test.py -f 2 -t 10 ledbat'
+        #- CMD='test/setup.py pcc         && test/test.py -f 2 -t 10 pcc'
+        #- CMD='test/setup.py verus       && test/test.py -f 2 -t 10 verus'
+        #- CMD='test/setup.py scream      && test/test.py -f 2 -t 10 scream'
+        #- CMD='test/setup.py sprout      && test/test.py -f 2 -t 10 sprout'
+        #- CMD='test/setup.py taova       && test/test.py -f 2 -t 10 taova'
 
 script:
   - test/pre_setup.py
