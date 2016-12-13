@@ -18,6 +18,9 @@ def main():
            'texlive python-matplotlib')
     check_call(cmd, shell=True)
 
+    cmd = ('sudo pip install matplotlib')
+    check_call(cmd, shell=True)
+
     install_pantheon_tunnel()
 
 
